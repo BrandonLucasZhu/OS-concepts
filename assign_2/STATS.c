@@ -31,7 +31,7 @@ static int semaphore_v(int valSig);
 	int test1[5] = {5,6,8,2,7};
 	char debug;
 
-
+//Comment semun IF <sys/sem.h> CONTAINS SEMUN
 union semun {
     int val;
     struct semid_ds *buf;
@@ -148,7 +148,6 @@ int main(){
 			}			
 						
 			
-			sleep(rand() % 3);
 			
 			if (shared_stuff->array_mod[1] < shared_stuff->array_mod[2]){
 				//Pass address location of values from the shared memory and swap the values
@@ -175,7 +174,6 @@ int main(){
 		   	}
 
 
-			sleep(rand() % 3);
 
 		}
 		
@@ -196,7 +194,6 @@ int main(){
 			}			
 						
 			
-			sleep(rand() % 3);
 			
 			if (shared_stuff->array_mod[2] < shared_stuff->array_mod[3]){
 				//Pass address location of values from the shared memory and swap the values
@@ -222,8 +219,6 @@ int main(){
 				exit(EXIT_FAILURE);
 		   	}
 
-			sleep(rand() % 3);
-
 		}
 		
 		exit(0);
@@ -238,7 +233,6 @@ int main(){
 				exit(EXIT_FAILURE);
 			}			
 			
-			sleep(rand() % 3);
 			
 			if (shared_stuff->array_mod[3] < shared_stuff->array_mod[4]){
 				//Pass address location of values from the shared memory and swap the values
@@ -261,7 +255,6 @@ int main(){
 				exit(EXIT_FAILURE);
 		   	}
 
-			sleep(rand() % 3);
 
 		}
 		
@@ -276,7 +269,6 @@ int main(){
 				printf("semop p"); 
 				exit(EXIT_FAILURE);
 			}			
-			sleep(rand() % 2);
 
 			if (shared_stuff->array_mod[0] < shared_stuff->array_mod[1]){
 				//Pass address location of values from the shared memory and swap the values
@@ -300,7 +292,6 @@ int main(){
 				exit(EXIT_FAILURE);
 		   	}
 
-			sleep(rand() % 2);
 		}
 		
 	}
